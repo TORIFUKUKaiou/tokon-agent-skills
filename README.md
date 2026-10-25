@@ -54,6 +54,7 @@ Each skill is meticulously crafted in **Japanese** to maximize conversational nu
 | **[`infographic`](skills/infographic/SKILL.md)** | **The V9 Legend Infographic Designer**. Extracts the core thesis of any article or essay and visualizes it as a high-density 1280x670px visual translation across 12 artistic styles (Studio Ghibli, Kiyoshi Yamashita paper collage, Picasso cubism, pixel art, editorial sketch, etc.). |
 | **[`tokon-novel`](skills/tokon-novel/SKILL.md)** | **Interactive Tokon Light Novel Generator**. Transforms personal hesitations, failures, and daily struggles into inspiring short light novels and cover prompts through structured step-by-step interviews. |
 | **[`book-note-partner`](skills/book-note-partner/SKILL.md)** | **Reading Companion & Essay Co-creator**. Passively logs stream-of-consciousness thoughts during reading (strictly spoiler-free) and collaborates to write essays upon completion. |
+| **[`apios-acrostic`](skills/apios-acrostic/SKILL.md)** | **The V9 Legend Apios Acrostic Poet**. Crafts 4-line acrostic poetry and micro-essays rooted in the letters "A" (あ), "Pi" (ぴ), "O" (お), and "Su" (す), harnessing the earthy vitality of the "eel of the field" (Apios). |
 
 ---
 
