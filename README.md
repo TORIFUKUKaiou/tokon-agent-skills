@@ -51,6 +51,7 @@ Each skill is meticulously crafted in **Japanese** to maximize conversational nu
 
 | Skill | Description |
 | :--- | :--- |
+| **[`character-design-kit`](skills/character-design-kit/SKILL.md)** | **The V9 Legend Character Design Champion**. Creates consistent character model sheets, transparent PNG cutouts, pose sheets, and reusable generation prompts from reference images. Offers numbered choices or an automatic mode, with gestures tailored to each character's personality and pursuits. |
 | **[`infographic`](skills/infographic/SKILL.md)** | **The V9 Legend Infographic Designer**. Extracts the core thesis of any article or essay and visualizes it as a high-density 1280x670px visual translation across 12 artistic styles (Studio Ghibli, Kiyoshi Yamashita paper collage, Picasso cubism, pixel art, editorial sketch, etc.). |
 | **[`tokon-novel`](skills/tokon-novel/SKILL.md)** | **Interactive Tokon Light Novel Generator**. Transforms personal hesitations, failures, and daily struggles into inspiring short light novels and cover prompts through structured step-by-step interviews. |
 | **[`book-note-partner`](skills/book-note-partner/SKILL.md)** | **Reading Companion & Essay Co-creator**. Passively logs stream-of-consciousness thoughts during reading (strictly spoiler-free) and collaborates to write essays upon completion. |
