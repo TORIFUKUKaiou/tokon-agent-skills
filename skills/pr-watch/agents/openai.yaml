@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR見張り"
+  short_description: "リポジトリのPRを見張り、対象が出たらレビューして報告。返信やpushを追いかけて再レビュー"
+  default_prompt: "$pr-watch を使い、指定したリポジトリのプルリクエストを見張ってください。Draft・WIP・自分のPRはレビューしないでください。レビューは報告だけにして、GitHubへの書き込みは私が指示したときだけにしてください。"

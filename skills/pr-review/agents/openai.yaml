@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRレビュー"
+  short_description: "PRを1本レビューし、指摘をコードで確かめて結論と文案を報告"
+  default_prompt: "$pr-review を使い、指定したプルリクエストをレビューしてください。指摘はコードで確かめ、結論と文案を報告してください。GitHubへの書き込みは私が指示したときだけにしてください。"
