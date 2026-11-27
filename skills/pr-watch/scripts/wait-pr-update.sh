@@ -54,14 +54,18 @@ read_pr() {
   # statusCheckRollup は CheckRun（name・workflowName・status・conclusion）と StatusContext
   # （context・state）が混ざるので、ワークフロー名・名前・結果の組にそろえる。ワークフロー名で、
   # 別のワークフローにある同じ名前のチェックを区別する。実行の URL や時刻は入れない（同じ結果の
-  # 再実行では起きない）
+  # 再実行では起きない）。
+  # reviewRequests は、依頼中のレビュアー（User は login、Team は slug）の一覧にそろえる。
+  # レビューの依頼・再依頼・取り消しを拾う。gh event listen にはこのイベントがないので、定期確認で拾う
   gh pr view "$number" --repo "$repository" --json \
-    baseRefName,baseRefOid,body,headRefOid,isDraft,reviewDecision,state,title,statusCheckRollup |
+    baseRefName,baseRefOid,body,headRefOid,isDraft,reviewDecision,reviewRequests,state,title,statusCheckRollup |
     jq -ceS 'select(type == "object" and (.headRefOid | type == "string"))
       | .statusCheckRollup |= ((. // [])
           | map({workflow: (.workflowName // ""), name: (.name // .context),
                  result: (.conclusion // .state // .status)})
-          | sort_by(.workflow, .name, .result))' || return
+          | sort_by(.workflow, .name, .result))
+      | .reviewRequests |= ((. // []) | map({type: .__typename, name: (.login // .slug // .name)})
+          | sort_by(.type, .name))' || return
   read_pages "$endpoint/pulls/$number/reviews" \
     'map({id, body, state, commit_id, submitted_at}) | sort_by(.id)' || return
   read_pages "$endpoint/pulls/$number/comments" "$comment_fields" || return
